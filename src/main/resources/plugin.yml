@@ -1,0 +1,26 @@
+name: ShulkerPet
+version: "0.1"
+api-version: "1.15"
+description: "Turns a Shulker into a pet with inventory that follows you around."
+
+author: NavyOtter
+website: https://otter.navy/
+
+main: navy.otter.shulkerpet.ShulkerPetPlugin
+database: false
+depend: []
+softdepend: []
+
+permissions:
+  shulkerpet.create:
+    description: "Creates a new ShulkerPet"
+    default: true
+  shulkerpet.remove:
+    description: "Removes a ShulkerPet from a Player"
+    default: true
+  shulkerpet.edit:
+    description: "Edit an existing ShulkerPet"
+    default: true
+  shulkerpet.wrap:
+    description: "Wraps a ShulkerPet into a SpawnEgg"
+    default: true

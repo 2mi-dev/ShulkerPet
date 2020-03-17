@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a227bb6d-677d-4059-aaf2-c80c9b7d313e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZBqX0pqvxQukESauiZKbOkxXR9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="navy.otter.shulkerpet.Executor" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a227bb6d-677d-4059-aaf2-c80c9b7d313e" name="Default Changelist" comment="" />
+      <created>1584322870751</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584322870751</updated>
+      <workItem from="1584322878789" duration="936000" />
+      <workItem from="1584403591466" duration="16086000" />
+      <workItem from="1584449714325" duration="1474000" />
+      <workItem from="1584455567976" duration="21618000" />
+      <workItem from="1584483475711" duration="4619000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="611" y="189" key="#Project_Structure" timestamp="1584416909887">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="611" y="189" key="#Project_Structure/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584416909887" />
+    <state x="780" y="223" width="687" height="568" key="#com.intellij.ide.util.MemberChooser" timestamp="1584488065513">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="780" y="223" width="687" height="568" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584488065513" />
+    <state x="786" y="441" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1584404952411">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="786" y="441" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584404952411" />
+    <state x="564" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1584418449029">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="564" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584418449029" />
+    <state x="749" y="278" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584479000285">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="749" y="278" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584479000285" />
+    <state x="377" y="190" key="Maven.ArtifactSearchDialog" timestamp="1584404412372">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="377" y="190" key="Maven.ArtifactSearchDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584404412372" />
+    <state x="825" y="215" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1584406567156">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="825" y="215" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584406567156" />
+    <state x="-1431" y="51" width="1267" height="890" key="dock-window-1" timestamp="1584488641764">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1431" y="51" width="1267" height="890" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584488641764" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1584482151848">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584482151848" />
+    <state x="-1135" y="242" width="672" height="678" key="search.everywhere.popup" timestamp="1584487147844">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1135" y="242" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584487147844" />
+  </component>
+</project>
