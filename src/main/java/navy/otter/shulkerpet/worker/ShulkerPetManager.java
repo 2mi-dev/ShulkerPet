@@ -58,6 +58,7 @@ public class ShulkerPetManager {
     sp.setColor(DyeColor.LIME);
     sp.setUuid(shulkerUuid);
     sp.setOwnerUUID(playerUuid);
+    sp.setShulker(shulker);
     sp.setCustomName(null); //todo
 
     shulkerMap.put(shulkerUuid, sp);

@@ -30,8 +30,6 @@ public class ShulkerTeleportThread implements Runnable {
 
       double distance = player.getLocation().distance(shulker.getLocation());
 
-      System.out.println(distance + " " + maxDistance);
-
       if(distance > maxDistance) {
         if(sp.isFollowing()) {
           teleportToPlayer(player, (Shulker) shulker);
