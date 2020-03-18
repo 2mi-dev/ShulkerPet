@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a227bb6d-677d-4059-aaf2-c80c9b7d313e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/entities/ShulkerPet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/entities/ShulkerPet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/listener/ShulkerRightClickListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/listener/ShulkerRightClickListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/listener/ShulkerTargetingListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/listener/ShulkerTargetingListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/util/ShulkerTeleportThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/util/ShulkerTeleportThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +65,7 @@
       <workItem from="1584449714325" duration="1474000" />
       <workItem from="1584455567976" duration="21618000" />
       <workItem from="1584483475711" duration="16174000" />
-      <workItem from="1584501882737" duration="1139000" />
+      <workItem from="1584501882737" duration="1322000" />
     </task>
     <task id="LOCAL-00001" summary="added spawning logic">
       <created>1584492300838</created>
@@ -93,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584498518239</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="alpha 0.0.0.3">
+      <created>1584503174237</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584503174237</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,9 +105,14 @@
     <MESSAGE value="added spawning logic" />
     <MESSAGE value="alpha 0.0.0.1" />
     <MESSAGE value="alpha 0.0.0.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="alpha 0.0.0.2" />
+    <MESSAGE value="alpha 0.0.0.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="alpha 0.0.0.3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Notifications" timestamp="1584503205365">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Notifications/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584503205365" />
     <state x="611" y="189" key="#Project_Structure" timestamp="1584416909887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -126,11 +133,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="749" y="278" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584479000285" />
-    <state x="-1345" y="114" key="CommitChangelistDialog2" timestamp="1584498516833">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="575" y="114" key="CommitChangelistDialog2" timestamp="1584503173026">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1345" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584498516833" />
-    <state x="575" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584496505161" />
+    <state x="575" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584503173026" />
     <state width="1877" height="235" key="GridCell.Tab.0.bottom" timestamp="1584502760970">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -155,11 +162,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="377" y="190" key="Maven.ArtifactSearchDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584404412372" />
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1584498520122">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1584503175386">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584498520122" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584496509294" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584503175386" />
     <state x="825" y="215" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1584406567156">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
