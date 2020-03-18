@@ -2,6 +2,7 @@ package navy.otter.shulkerpet.Entities;
 
 import java.util.UUID;
 import org.bukkit.DyeColor;
+import org.bukkit.entity.Player;
 
 public class ShulkerPet {
   DyeColor color = DyeColor.LIME;
@@ -10,7 +11,8 @@ public class ShulkerPet {
   String customName;
   boolean isFollowing = true;
 
-  public void openInventory() {
+  public void openInventory(Player player) {
+
     //todo
   }
 

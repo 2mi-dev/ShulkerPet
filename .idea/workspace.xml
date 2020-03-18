@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a227bb6d-677d-4059-aaf2-c80c9b7d313e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/Util/CardinalDirection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/Commands/ShulkerPetCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/Commands/ShulkerPetCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/Config/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/Config/Configuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/Entities/ControlItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/Entities/ControlItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/Listener/ShulkerRightClickListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/Listener/ShulkerRightClickListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/Entities/ShulkerPet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/Entities/ShulkerPet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/Worker/ShulkerPetManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/Worker/ShulkerPetManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +67,7 @@
       <workItem from="1584403591466" duration="16086000" />
       <workItem from="1584449714325" duration="1474000" />
       <workItem from="1584455567976" duration="21618000" />
-      <workItem from="1584483475711" duration="6242000" />
+      <workItem from="1584483475711" duration="8321000" />
     </task>
     <servers />
   </component>
@@ -105,10 +103,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="825" y="215" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584406567156" />
-    <state x="-1431" y="51" width="1267" height="890" key="dock-window-1" timestamp="1584488641764">
+    <state x="-1431" y="51" width="1267" height="890" key="dock-window-1" timestamp="1584490506845">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1431" y="51" width="1267" height="890" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584488641764" />
+    <state x="-1431" y="51" width="1267" height="890" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584490506845" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1584482151848">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
