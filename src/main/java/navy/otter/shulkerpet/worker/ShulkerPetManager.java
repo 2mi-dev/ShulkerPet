@@ -51,14 +51,11 @@ public class ShulkerPetManager {
     Entity entity = world.spawnEntity(playerLocation, EntityType.SHULKER);
     Shulker shulker = (Shulker) entity;
 
-    UUID playerUuid = player.getUniqueId();
     UUID shulkerUuid = shulker.getUniqueId();
 
-    ShulkerPet sp = new ShulkerPet();
+    ShulkerPet sp = new ShulkerPet(shulker, player);
     sp.setColor(DyeColor.LIME);
-    sp.setUuid(shulkerUuid);
-    sp.setOwnerUUID(playerUuid);
-    sp.setShulker(shulker);
+    sp.setFollowing(true);
     sp.setCustomName(null); //todo
 
     shulkerMap.put(shulkerUuid, sp);

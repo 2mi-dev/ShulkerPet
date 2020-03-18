@@ -82,7 +82,6 @@ public class Configuration {
     this.notAShulkerPetMsg = msgPrefix + config.getString(Key.NOT_A_SHULKERPET_MSG);
     this.inventoryFullMsg = msgPrefix + config.getString(Key.INVENTORY_FULL_MSG);
     this.invalidSpawningLocationMsg = msgPrefix + config.getString(Key.INVALID_SPAWNING_LOCATION_MSG);
-
   }
 
   public double getMaxDistToPlayer() {

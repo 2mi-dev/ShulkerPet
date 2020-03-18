@@ -19,6 +19,8 @@ import org.bukkit.inventory.ItemStack;
 
 public class ShulkerRightClickListener implements Listener {
 
+  Configuration config = ShulkerPetPlugin.getConfiguration();
+
   @EventHandler
   public void onPlayerInteractEntityEvent(PlayerInteractEntityEvent e) {
     Entity entity = e.getRightClicked();
@@ -45,7 +47,7 @@ public class ShulkerRightClickListener implements Listener {
     Material mainHandStackMaterial = mainHandStack.getType();
 
     if(mainHandStack == ControlItem.createControlItem()) {
-      sp.setFollowing(!sp.isFollowing());
+      sp.toggleFollowing();
       e.setCancelled(true);
       return;
     }
@@ -109,10 +111,10 @@ public class ShulkerRightClickListener implements Listener {
       UUID shulkerUuid) {
     UUID playerUuid = player.getUniqueId();
     if (!shulkerMap.containsKey(shulkerUuid)) {
-      player.sendMessage("Das ist kein ShulkerPet!");
+      player.sendMessage(config.getNotAShulkerPetMsg());
       return false;
-    } else if (shulkerMap.get(shulkerUuid).getOwnerUUID() != playerUuid) {
-      player.sendMessage("Das ist nicht dein ShulkerPet!");
+    } else if (shulkerMap.get(shulkerUuid).getOwnerUuid() != playerUuid) {
+      player.sendMessage(config.getNotYourShulkerPetMsg());
       return false;
     }
     return true;

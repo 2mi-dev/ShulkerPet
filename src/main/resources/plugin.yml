@@ -30,4 +30,4 @@ permissions:
 
 commands:
   shulkerpet:
-    alias: ["sp", "spet"]
+    aliases: ["sp", "spet"]

@@ -7,11 +7,19 @@ import org.bukkit.entity.Shulker;
 
 public class ShulkerPet {
   DyeColor color;
-  UUID uuid;
-  UUID ownerUUID;
+  final UUID uuid;
+  final UUID ownerUuid;
   String customName;
-  Shulker shulker;
+  final Shulker shulker;
+  final Player owner;
   boolean isFollowing = true;
+
+  public ShulkerPet(Shulker shulker, Player owner) {
+    this.shulker = shulker;
+    this.uuid = shulker.getUniqueId();
+    this.owner = owner;
+    this.ownerUuid = owner.getUniqueId();
+  }
 
   public void openInventory(Player player) {
     //todo
@@ -23,23 +31,19 @@ public class ShulkerPet {
 
   public void setColor(DyeColor color) {
     this.color = color;
-    //shulker.setColor(color); todo
+    this.getShulker().setColor(color);
   }
 
   public UUID getUuid() {
     return uuid;
   }
 
-  public void setUuid(UUID uuid) {
-    this.uuid = uuid;
+  public Player getOwner() {
+    return owner;
   }
 
-  public UUID getOwnerUUID() {
-    return ownerUUID;
-  }
-
-  public void setOwnerUUID(UUID ownerUUID) {
-    this.ownerUUID = ownerUUID;
+  public UUID getOwnerUuid() {
+    return ownerUuid;
   }
 
   public String getCustomName() {
@@ -56,15 +60,19 @@ public class ShulkerPet {
     return shulker;
   }
 
-  public void setShulker(Shulker shulker) {
-    this.shulker = shulker;
-  }
-
   public boolean isFollowing() {
     return isFollowing;
   }
 
   public void setFollowing(boolean following) {
-    isFollowing = following;
+    this.isFollowing = following;
+  }
+
+  public void toggleFollowing() {
+    if(this.isFollowing) {
+      this.setFollowing(false);
+    } else{
+      this.setFollowing(true);
+    }
   }
 }
