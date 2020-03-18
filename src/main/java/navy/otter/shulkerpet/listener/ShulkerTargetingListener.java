@@ -12,13 +12,13 @@ public class ShulkerTargetingListener implements Listener {
 
   @EventHandler
   public void onEntityTargetEvent(EntityTargetEvent e) {
+
     Entity entity = e.getEntity();
     if(!(entity instanceof Shulker)) {
       return;
     }
     Shulker shulker = (Shulker) entity;
     UUID shulkerUuid = shulker.getUniqueId();
-
     if(ShulkerPetManager.getShulkerMap().containsKey(shulkerUuid)){
       e.setCancelled(true);
     }

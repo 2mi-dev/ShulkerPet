@@ -37,16 +37,16 @@ public class ShulkerRightClickListener implements Listener {
     }
 
     ShulkerPet sp = shulkerMap.get(shulkerUuid);
-    checkHandItem(sp, player);
+    checkHandItem(sp, player, e);
   }
 
-  private void checkHandItem(ShulkerPet sp, Player player) {
-    Configuration config = ShulkerPetPlugin.getConfiguration();
+  private void checkHandItem(ShulkerPet sp, Player player, PlayerInteractEntityEvent e) {
     ItemStack mainHandStack = player.getInventory().getItemInMainHand();
     Material mainHandStackMaterial = mainHandStack.getType();
 
     if(mainHandStack == ControlItem.createControlItem()) {
       sp.setFollowing(!sp.isFollowing());
+      e.setCancelled(true);
       return;
     }
 

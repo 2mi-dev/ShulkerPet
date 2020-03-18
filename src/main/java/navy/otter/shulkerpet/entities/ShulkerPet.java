@@ -1,11 +1,14 @@
 package navy.otter.shulkerpet.entities;
 
 import java.util.UUID;
+import org.bukkit.Bukkit;
 import org.bukkit.DyeColor;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
+import org.bukkit.entity.Shulker;
 
 public class ShulkerPet {
-  DyeColor color = DyeColor.LIME;
+  DyeColor color;
   UUID uuid;
   UUID ownerUUID;
   String customName;
@@ -22,6 +25,11 @@ public class ShulkerPet {
 
   public void setColor(DyeColor color) {
     this.color = color;
+    Entity shulker = Bukkit.getEntity(uuid);
+    if(shulker instanceof Shulker) {
+      Shulker shulker1 = (Shulker) shulker;
+      shulker1.setColor(this.color);
+    }
   }
 
   public UUID getUuid() {

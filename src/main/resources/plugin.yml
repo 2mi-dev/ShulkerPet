@@ -27,3 +27,7 @@ permissions:
   shulkerpet.help:
     description: "Displays help messages"
     default: true
+
+commands:
+  shulkerpet:
+    alias: ["sp", "spet"]
