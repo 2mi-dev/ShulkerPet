@@ -13,14 +13,14 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class ShulkerPetPlugin extends JavaPlugin {
 
   private static ShulkerPetPlugin instance;
-  public ShulkerPetManager spManager = new ShulkerPetManager();
-  Configuration config;
+  public static Configuration config;
+  public ShulkerPetManager spManager;
 
   @Override
   public void onEnable() {
-    instance = this;
     config = new Configuration(this);
-
+    spManager = new ShulkerPetManager();
+    instance = this;
     getCommand("shulkerpet").setExecutor(new ShulkerPetCommand());
     getServer().getPluginManager().registerEvents(new ShulkerRightClickListener(), this);
     getServer().getPluginManager().registerEvents(new BlockRightClickListener(), this);
@@ -39,7 +39,7 @@ public class ShulkerPetPlugin extends JavaPlugin {
     return instance;
   }
 
-  public Configuration getConfiguration() {
+  public static Configuration getConfiguration() {
     return config;
   }
 

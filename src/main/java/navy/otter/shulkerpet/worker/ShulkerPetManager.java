@@ -20,7 +20,7 @@ import org.bukkit.entity.Shulker;
 public class ShulkerPetManager {
 
   static HashMap<UUID, ShulkerPet> shulkerMap = new HashMap<>();
-  Configuration config = ShulkerPetPlugin.getMainInstance().getConfiguration();
+  static Configuration config = ShulkerPetPlugin.getConfiguration();
 
   public void createShulker(Player player) {
 

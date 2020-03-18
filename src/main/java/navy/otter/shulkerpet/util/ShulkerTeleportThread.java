@@ -13,7 +13,7 @@ import org.bukkit.entity.Shulker;
 public class ShulkerTeleportThread implements Runnable {
 
   HashMap<UUID, ShulkerPet> shulkerMap = ShulkerPetManager.getShulkerMap();
-  double maxDistance = ShulkerPetPlugin.getMainInstance().getConfiguration().getMaxDistToPlayer();
+  double maxDistance = ShulkerPetPlugin.getConfiguration().getMaxDistToPlayer();
 
   @Override
   public void run() {

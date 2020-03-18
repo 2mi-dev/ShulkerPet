@@ -13,7 +13,7 @@ public class BlockRightClickListener implements Listener {
   @EventHandler
   public void onPlayerInteractEvent(PlayerInteractEvent e) {
     Block clickedBlock = e.getClickedBlock();
-    Configuration config = ShulkerPetPlugin.getMainInstance().getConfiguration();
+    Configuration config = ShulkerPetPlugin.getConfiguration();
     if(e.getPlayer().getInventory().getItemInMainHand().getType() != config.getControlItemMaterial()
         || clickedBlock == null) {
       return;

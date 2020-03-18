@@ -15,12 +15,15 @@ permissions:
   shulkerpet.create:
     description: "Creates a new ShulkerPet"
     default: true
-  shulkerpet.remove:
+  shulkerpet.delete:
     description: "Removes a ShulkerPet from a Player"
     default: true
   shulkerpet.edit:
     description: "Edit an existing ShulkerPet"
     default: true
-  shulkerpet.wrap:
-    description: "Wraps a ShulkerPet into a SpawnEgg"
+  shulkerpet.ci:
+    description: "Gives the ShulkerPet Control Item"
+    default: true
+  shulkerpet.help:
+    description: "Displays help messages"
     default: true

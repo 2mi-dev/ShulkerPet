@@ -5,7 +5,6 @@ import java.util.Iterator;
 import navy.otter.shulkerpet.config.Configuration;
 import navy.otter.shulkerpet.entities.ControlItem;
 import navy.otter.shulkerpet.ShulkerPetPlugin;
-import navy.otter.shulkerpet.entities.ShulkerPet;
 import navy.otter.shulkerpet.worker.ShulkerPetManager;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -16,7 +15,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class ShulkerPetCommand implements CommandExecutor {
 
-  Configuration config = ShulkerPetPlugin.getMainInstance().getConfiguration();
+  Configuration config = ShulkerPetPlugin.getConfiguration();
 
   @Override
   public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command,
@@ -59,7 +58,7 @@ public class ShulkerPetCommand implements CommandExecutor {
   }
 
   public void displayHelpMessage(Player player) {
-
+    player.sendMessage("Help Info for ShulkerPet");
   }
 
   public void createShulker(Player player) {

@@ -12,7 +12,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 public class ControlItem {
 
-  private static Configuration config = ShulkerPetPlugin.getMainInstance().getConfiguration();
+  private static Configuration config = ShulkerPetPlugin.getConfiguration();
   private static Material ciMaterial = config.getControlItemMaterial();
   private static Enchantment enchantment = Enchantment.MENDING;
 

@@ -41,7 +41,7 @@ public class ShulkerRightClickListener implements Listener {
   }
 
   private void checkHandItem(ShulkerPet sp, Player player) {
-    Configuration config = ShulkerPetPlugin.getMainInstance().getConfiguration();
+    Configuration config = ShulkerPetPlugin.getConfiguration();
     ItemStack mainHandStack = player.getInventory().getItemInMainHand();
     Material mainHandStackMaterial = mainHandStack.getType();
 
