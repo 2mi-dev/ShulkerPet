@@ -5,7 +5,7 @@ import navy.otter.shulkerpet.config.Configuration;
 import navy.otter.shulkerpet.listener.BlockRightClickListener;
 import navy.otter.shulkerpet.listener.ShulkerRightClickListener;
 import navy.otter.shulkerpet.listener.ShulkerTargetingListener;
-import navy.otter.shulkerpet.util.ShulkerTeleportThread;
+import navy.otter.shulkerpet.worker.ShulkerTeleportThread;
 import navy.otter.shulkerpet.worker.ShulkerPetManager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;

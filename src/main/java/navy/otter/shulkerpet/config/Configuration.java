@@ -22,10 +22,11 @@ public class Configuration {
 
     private static final String MSG_PREFIX = "msg-prefix";
     private static final String UNKNOWN_CMD_MSG = "unknown-cmd-msg";
-    private static final String NOT_YOUR_SHULKERPET_MSG = "not-your-shulker-message";
+    private static final String NOT_YOUR_SHULKERPET_MSG = "not-your-shulkerpet-msg";
     private static final String NOT_A_SHULKERPET_MSG = "not-a-shulkerpet-msg";
     private static final String INVENTORY_FULL_MSG = "inventory-full-msg";
     private static final String INVALID_SPAWNING_LOCATION_MSG = "invalid-spawning-location-msg";
+    private static final String INVALID_LOCATION_MSG = "invalid-location-msg";
   }
 
   private final double maxDistToPlayer;
@@ -40,6 +41,8 @@ public class Configuration {
   private final String notAShulkerPetMsg;
   private final String inventoryFullMsg;
   private final String invalidSpawningLocationMsg;
+  private final String invalidLocationMsg;
+
 
   public Configuration(@NotNull ShulkerPetPlugin plugin) {
     FileConfiguration config = plugin.getConfig();
@@ -76,12 +79,14 @@ public class Configuration {
       unsafeBlocks.add(material);
     }
 
-    this.msgPrefix = config.getString(Key.MSG_PREFIX);
+    String rawMsgPrefix = config.getString(Key.MSG_PREFIX);
+    this.msgPrefix = ChatColor.translateAlternateColorCodes('&', rawMsgPrefix);
     this.unknownCmdMsg = msgPrefix + config.getString(Key.UNKNOWN_CMD_MSG);
     this.notYourShulkerPetMsg = msgPrefix + config.getString(Key.NOT_YOUR_SHULKERPET_MSG);
     this.notAShulkerPetMsg = msgPrefix + config.getString(Key.NOT_A_SHULKERPET_MSG);
     this.inventoryFullMsg = msgPrefix + config.getString(Key.INVENTORY_FULL_MSG);
     this.invalidSpawningLocationMsg = msgPrefix + config.getString(Key.INVALID_SPAWNING_LOCATION_MSG);
+    this.invalidLocationMsg = msgPrefix + config.getString(Key.INVALID_LOCATION_MSG);
   }
 
   public double getMaxDistToPlayer() {
@@ -122,5 +127,9 @@ public class Configuration {
 
   public String getInvalidSpawningLocationMsg() {
     return invalidSpawningLocationMsg;
+  }
+
+  public String getInvalidLocationMsg() {
+    return invalidLocationMsg;
   }
 }

@@ -1,44 +1,16 @@
 package navy.otter.shulkerpet.util;
 
-import java.util.HashMap;
-import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
-import navy.otter.shulkerpet.ShulkerPetPlugin;
-import navy.otter.shulkerpet.entities.ShulkerPet;
-import navy.otter.shulkerpet.worker.ShulkerPetManager;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Shulker;
 
-public class ShulkerTeleportThread implements Runnable {
+public class LocationCheck {
 
-  HashMap<UUID, ShulkerPet> shulkerMap = ShulkerPetManager.getShulkerMap();
-  double maxDistance = ShulkerPetPlugin.getConfiguration().getMaxDistToPlayer();
 
-  @Override
-  public void run() {
 
-    for (UUID shulkerUuid : shulkerMap.keySet()) {
-      ShulkerPet sp = shulkerMap.get(shulkerUuid);
-      Shulker shulker = sp.getShulker();
-      Player player = sp.getOwner();
-
-      if (player == null || shulker == null || !player.isOnline()) {
-        continue;
-      }
-
-      double distance = player.getLocation().distance(shulker.getLocation());
-
-      if (distance > maxDistance) {
-        if (sp.isFollowing()) {
-          teleportToPlayer(player, shulker);
-        }
-      }
-    }
-  }
-
-  private void teleportToPlayer(Player player, Shulker shulker) {
+  public static void teleportToPlayer(Player player, Shulker shulker) {
     /*
     any-solid-air-air-any
     min 1m zu spieler, max 5m
@@ -74,7 +46,7 @@ public class ShulkerTeleportThread implements Runnable {
   }
 
   // Check for air on air on solid block
-  public boolean checkTeleportBlocks(Player player, Location location) {
+  public static boolean checkTeleportBlocks(Player player, Location location) {
     Block srcBlock = location.getBlock();
     if (srcBlock.isEmpty() && srcBlock.getRelative(0, 1, 0).isEmpty()) {
       if (srcBlock.getRelative(0, -1, 0).getType().isSolid()) {
@@ -85,8 +57,8 @@ public class ShulkerTeleportThread implements Runnable {
   }
 
   // Check if location is > 1 and < 5 blocks from player
-  public boolean checkDistance(Player player, Location location) {
+  public static boolean checkDistance(Player player, Location location) {
     double distance = player.getLocation().distance(location);
-    return distance > 1 && distance < 5;
+    return distance > 1 && distance < 6;
   }
 }

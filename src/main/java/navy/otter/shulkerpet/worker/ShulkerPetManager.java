@@ -50,6 +50,7 @@ public class ShulkerPetManager {
 
     Entity entity = world.spawnEntity(playerLocation, EntityType.SHULKER);
     Shulker shulker = (Shulker) entity;
+    shulker.setInvulnerable(true);
 
     UUID shulkerUuid = shulker.getUniqueId();
 

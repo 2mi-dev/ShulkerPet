@@ -1,6 +1,7 @@
 package navy.otter.shulkerpet.listener;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.UUID;
 import navy.otter.shulkerpet.config.Configuration;
 import navy.otter.shulkerpet.entities.ControlItem;
@@ -20,11 +21,18 @@ import org.bukkit.inventory.ItemStack;
 public class ShulkerRightClickListener implements Listener {
 
   Configuration config = ShulkerPetPlugin.getConfiguration();
+  HashSet<Player> singleUse = new HashSet<>();
 
   @EventHandler
   public void onPlayerInteractEntityEvent(PlayerInteractEntityEvent e) {
     Entity entity = e.getRightClicked();
     Player player = e.getPlayer();
+
+    if(singleUse.contains(player)) {
+      singleUse.remove(player);
+      return;
+    }
+    singleUse.add(player);
 
     if (!(entity instanceof Shulker)) {
       return;
@@ -46,7 +54,7 @@ public class ShulkerRightClickListener implements Listener {
     ItemStack mainHandStack = player.getInventory().getItemInMainHand();
     Material mainHandStackMaterial = mainHandStack.getType();
 
-    if(mainHandStack == ControlItem.createControlItem()) {
+    if(mainHandStack == ControlItem.createControlItem() && player == sp.getOwner()) {
       sp.toggleFollowing();
       e.setCancelled(true);
       return;
