@@ -1,14 +1,11 @@
-package navy.otter.shulkerpet.Config;
+package navy.otter.shulkerpet.config;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import navy.otter.shulkerpet.ShulkerPetPlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.block.Block;
-import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.jetbrains.annotations.NotNull;
 
@@ -28,10 +25,10 @@ public class Configuration {
     private static final String NOT_YOUR_SHULKERPET_MSG = "not-your-shulker-message";
     private static final String NOT_A_SHULKERPET_MSG = "not-a-shulkerpet-msg";
     private static final String INVENTORY_FULL_MSG = "inventory-full-msg";
-
+    private static final String INVALID_SPAWNING_LOCATION_MSG = "invalid-spawning-location-msg";
   }
 
-  private final int maxDistToPlayer;
+  private final double maxDistToPlayer;
   private final int checkDelay;
   private Material controlItemMaterial = Material.BAMBOO;
   private final List<String> controlItemLore;
@@ -42,17 +39,18 @@ public class Configuration {
   private final String notYourShulkerPetMsg;
   private final String notAShulkerPetMsg;
   private final String inventoryFullMsg;
+  private final String invalidSpawningLocationMsg;
 
   public Configuration(@NotNull ShulkerPetPlugin plugin) {
     FileConfiguration config = plugin.getConfig();
     config.options().copyDefaults(true);
     plugin.saveConfig();
 
-    this.maxDistToPlayer = config.getInt(Key.MAX_DIST_TO_PLAYER);
+    this.maxDistToPlayer = config.getDouble(Key.MAX_DIST_TO_PLAYER);
     this.checkDelay = config.getInt(Key.CHECK_DELAY);
     String materialType = config.getString(Key.CONTROL_ITEM);
     if(materialType == null) {
-      Bukkit.getLogger().info("Material not found: " + materialType + ", falling back to default"
+      Bukkit.getLogger().info("Material not found, falling back to default:"
           + " Bamboo Stick.");
     } else {
       this.controlItemMaterial = Material.getMaterial(materialType);
@@ -61,7 +59,7 @@ public class Configuration {
     List<String> controlItemLores = plugin.getConfig().getStringList(Key.CONTROL_ITEM_LORE);
     for (String loreLine : controlItemLores) {
       if (loreLine == null) {
-        Bukkit.getLogger().info(() -> "Lore invalid: " + loreLine);
+        Bukkit.getLogger().info(() -> "Lore contains invalid line");
         continue;
       }
       controlItemLore.add(ChatColor.GREEN + loreLine);
@@ -83,10 +81,11 @@ public class Configuration {
     this.notYourShulkerPetMsg = msgPrefix + config.getString(Key.NOT_YOUR_SHULKERPET_MSG);
     this.notAShulkerPetMsg = msgPrefix + config.getString(Key.NOT_A_SHULKERPET_MSG);
     this.inventoryFullMsg = msgPrefix + config.getString(Key.INVENTORY_FULL_MSG);
+    this.invalidSpawningLocationMsg = msgPrefix + config.getString(Key.INVALID_SPAWNING_LOCATION_MSG);
 
   }
 
-  public int getMaxDistToPlayer() {
+  public double getMaxDistToPlayer() {
     return maxDistToPlayer;
   }
 
@@ -120,5 +119,9 @@ public class Configuration {
 
   public String getInventoryFullMsg() {
     return inventoryFullMsg;
+  }
+
+  public String getInvalidSpawningLocationMsg() {
+    return invalidSpawningLocationMsg;
   }
 }

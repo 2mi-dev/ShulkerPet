@@ -1,7 +1,7 @@
-package navy.otter.shulkerpet.Listener;
+package navy.otter.shulkerpet.listener;
 
 import java.util.UUID;
-import navy.otter.shulkerpet.Worker.ShulkerPetManager;
+import navy.otter.shulkerpet.worker.ShulkerPetManager;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Shulker;
 import org.bukkit.event.EventHandler;

@@ -1,6 +1,6 @@
-package navy.otter.shulkerpet.Listener;
+package navy.otter.shulkerpet.listener;
 
-import navy.otter.shulkerpet.Config.Configuration;
+import navy.otter.shulkerpet.config.Configuration;
 import navy.otter.shulkerpet.ShulkerPetPlugin;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;

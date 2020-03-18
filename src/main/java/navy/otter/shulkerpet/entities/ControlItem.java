@@ -1,7 +1,7 @@
-package navy.otter.shulkerpet.Entities;
+package navy.otter.shulkerpet.entities;
 
 import java.util.List;
-import navy.otter.shulkerpet.Config.Configuration;
+import navy.otter.shulkerpet.config.Configuration;
 import navy.otter.shulkerpet.ShulkerPetPlugin;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;

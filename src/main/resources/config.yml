@@ -1,4 +1,4 @@
-max-dist-to-player: 10
+max-dist-to-player: 10.0
 check-delay: 1
 control-item: BAMBOO
 control-item-lore:
@@ -7,8 +7,8 @@ control-item-lore:
   - "Rechtsklick auf dein ShulkerPet"
   - "um das Folgen zu deaktivieren."
   - "Klicke auf einen Block, um"
-  - "deinem ShulkerPet eine bestimmte"
-  - "Position zuzuweisen."
+  - "dein ShulkerPet an diese"
+  - "Position zu teleportieren."
 unsafe-blocks:
   - "BEDROCK"
   - "FIRE"
@@ -32,6 +32,8 @@ WrongOwner: "Das ist nicht dein ShulkerPet!"
 NotAShulkerPet: "Das ist kein ShulkerPet!"
 
 plugin-prefix: "&7[&9ShulkerPet&7] "
-unknown-cmd-msg: "Dieser Befehl existiert nicht!"
-not-your-shulkerpet-msg: "Das ist nicht dein ShulkerPet!"
-not-a-shulkerpet-msg:
+unknown-cmd-msg: "Dieser Befehl existiert nicht."
+not-your-shulkerpet-msg: "Das ist nicht dein ShulkerPet."
+not-a-shulkerpet-msg: "Das ist kein ShulkerPet."
+inventory-full-msg: "Dein Inventar ist voll, Befehl abgebrochen."
+invalid-spawning-location-msg: "Der Versuch einen Shulker zu erzeugen ist fehlgeschlagen. Versuche es erneut in einer flachen Umgebung."

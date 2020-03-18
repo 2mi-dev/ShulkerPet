@@ -1,11 +1,13 @@
 package navy.otter.shulkerpet;
 
-import navy.otter.shulkerpet.Commands.ShulkerPetCommand;
-import navy.otter.shulkerpet.Config.Configuration;
-import navy.otter.shulkerpet.Listener.BlockRightClickListener;
-import navy.otter.shulkerpet.Listener.ShulkerRightClickListener;
-import navy.otter.shulkerpet.Listener.ShulkerTargetingListener;
-import navy.otter.shulkerpet.Worker.ShulkerPetManager;
+import navy.otter.shulkerpet.commands.ShulkerPetCommand;
+import navy.otter.shulkerpet.config.Configuration;
+import navy.otter.shulkerpet.listener.BlockRightClickListener;
+import navy.otter.shulkerpet.listener.ShulkerRightClickListener;
+import navy.otter.shulkerpet.listener.ShulkerTargetingListener;
+import navy.otter.shulkerpet.util.ShulkerTeleportThread;
+import navy.otter.shulkerpet.worker.ShulkerPetManager;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class ShulkerPetPlugin extends JavaPlugin {
@@ -23,6 +25,9 @@ public class ShulkerPetPlugin extends JavaPlugin {
     getServer().getPluginManager().registerEvents(new ShulkerRightClickListener(), this);
     getServer().getPluginManager().registerEvents(new BlockRightClickListener(), this);
     getServer().getPluginManager().registerEvents(new ShulkerTargetingListener(), this);
+
+    Bukkit.getScheduler().runTaskTimerAsynchronously(this, new ShulkerTeleportThread(), 0L,
+        (config.getCheckDelay() * 20));
   }
 
   @Override
@@ -36,6 +41,10 @@ public class ShulkerPetPlugin extends JavaPlugin {
 
   public Configuration getConfiguration() {
     return config;
+  }
+
+  public ShulkerPetManager getSpManager() {
+    return spManager;
   }
 }
 

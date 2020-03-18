@@ -1,12 +1,12 @@
-package navy.otter.shulkerpet.Listener;
+package navy.otter.shulkerpet.listener;
 
 import java.util.HashMap;
 import java.util.UUID;
-import navy.otter.shulkerpet.Config.Configuration;
-import navy.otter.shulkerpet.Entities.ControlItem;
-import navy.otter.shulkerpet.Entities.ShulkerPet;
+import navy.otter.shulkerpet.config.Configuration;
+import navy.otter.shulkerpet.entities.ControlItem;
+import navy.otter.shulkerpet.entities.ShulkerPet;
 import navy.otter.shulkerpet.ShulkerPetPlugin;
-import navy.otter.shulkerpet.Worker.ShulkerPetManager;
+import navy.otter.shulkerpet.worker.ShulkerPetManager;
 import org.bukkit.DyeColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Entity;
@@ -100,7 +100,7 @@ public class ShulkerRightClickListener implements Listener {
         sp.setColor(DyeColor.BLACK);
         break;
       default:
-        sp.openInventory();
+        sp.openInventory(player);
         break;
     }
   }

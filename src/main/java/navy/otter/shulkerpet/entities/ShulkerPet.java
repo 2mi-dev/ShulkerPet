@@ -1,4 +1,4 @@
-package navy.otter.shulkerpet.Entities;
+package navy.otter.shulkerpet.entities;
 
 import java.util.UUID;
 import org.bukkit.DyeColor;

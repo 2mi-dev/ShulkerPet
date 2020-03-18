@@ -1,4 +1,4 @@
-package navy.otter.shulkerpet.Util;
+package navy.otter.shulkerpet.util;
 
 import org.bukkit.entity.Player;
 
