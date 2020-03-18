@@ -3,6 +3,7 @@ package navy.otter.shulkerpet.Listener;
 import java.util.HashMap;
 import java.util.UUID;
 import navy.otter.shulkerpet.Config.Configuration;
+import navy.otter.shulkerpet.Entities.ControlItem;
 import navy.otter.shulkerpet.Entities.ShulkerPet;
 import navy.otter.shulkerpet.ShulkerPetPlugin;
 import navy.otter.shulkerpet.Worker.ShulkerPetManager;
@@ -14,6 +15,7 @@ import org.bukkit.entity.Shulker;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
+import org.bukkit.inventory.ItemStack;
 
 public class ShulkerRightClickListener implements Listener {
 
@@ -40,9 +42,10 @@ public class ShulkerRightClickListener implements Listener {
 
   private void checkHandItem(ShulkerPet sp, Player player) {
     Configuration config = ShulkerPetPlugin.getMainInstance().getConfiguration();
-    Material mainHandStackMaterial = player.getInventory().getItemInMainHand().getType();
+    ItemStack mainHandStack = player.getInventory().getItemInMainHand();
+    Material mainHandStackMaterial = mainHandStack.getType();
 
-    if(mainHandStackMaterial == config.getControlItemMaterial()) {
+    if(mainHandStack == ControlItem.createControlItem()) {
       sp.setFollowing(!sp.isFollowing());
       return;
     }

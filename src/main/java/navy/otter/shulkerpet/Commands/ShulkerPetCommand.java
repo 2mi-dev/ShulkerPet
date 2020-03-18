@@ -3,12 +3,13 @@ package navy.otter.shulkerpet.Commands;
 import java.util.Arrays;
 import java.util.Iterator;
 import navy.otter.shulkerpet.Config.Configuration;
-import navy.otter.shulkerpet.Entities.ShulkerPet;
+import navy.otter.shulkerpet.Entities.ControlItem;
 import navy.otter.shulkerpet.ShulkerPetPlugin;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
 public class ShulkerPetCommand implements CommandExecutor {
@@ -55,11 +56,24 @@ public class ShulkerPetCommand implements CommandExecutor {
     return false;
   }
 
+  public void displayHelpMessage(Player player) {
+
+  }
+
   public void createShulker(Player player) {
 
   }
 
   public void deleteShulker(Player player) {
 
+  }
+
+  public void giveControlItem(Player player) {
+    ItemStack ciItem = ControlItem.createControlItem();
+    if(player.getInventory().firstEmpty() != -1) {
+      player.getInventory().addItem(ciItem);
+    } else {
+      player.sendMessage(config.getInventoryFullMsg());
+    }
   }
 }

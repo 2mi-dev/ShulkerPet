@@ -27,6 +27,7 @@ public class Configuration {
     private static final String UNKNOWN_CMD_MSG = "unknown-cmd-msg";
     private static final String NOT_YOUR_SHULKERPET_MSG = "not-your-shulker-message";
     private static final String NOT_A_SHULKERPET_MSG = "not-a-shulkerpet-msg";
+    private static final String INVENTORY_FULL_MSG = "inventory-full-msg";
 
   }
 
@@ -40,6 +41,7 @@ public class Configuration {
   private final String unknownCmdMsg;
   private final String notYourShulkerPetMsg;
   private final String notAShulkerPetMsg;
+  private final String inventoryFullMsg;
 
   public Configuration(@NotNull ShulkerPetPlugin plugin) {
     FileConfiguration config = plugin.getConfig();
@@ -80,6 +82,7 @@ public class Configuration {
     this.unknownCmdMsg = msgPrefix + config.getString(Key.UNKNOWN_CMD_MSG);
     this.notYourShulkerPetMsg = msgPrefix + config.getString(Key.NOT_YOUR_SHULKERPET_MSG);
     this.notAShulkerPetMsg = msgPrefix + config.getString(Key.NOT_A_SHULKERPET_MSG);
+    this.inventoryFullMsg = msgPrefix + config.getString(Key.INVENTORY_FULL_MSG);
 
   }
 
@@ -113,5 +116,9 @@ public class Configuration {
 
   public String getNotAShulkerPetMsg() {
     return notAShulkerPetMsg;
+  }
+
+  public String getInventoryFullMsg() {
+    return inventoryFullMsg;
   }
 }
