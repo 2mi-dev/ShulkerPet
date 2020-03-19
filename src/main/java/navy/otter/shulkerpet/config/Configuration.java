@@ -18,6 +18,7 @@ public class Configuration {
     private static final String CHECK_DELAY = "check-delay";
     private static final String CONTROL_ITEM = "control-item";
     private static final String CONTROL_ITEM_LORE = "control-item-lore";
+    private static final String ENABLE_SHULKER_FOLLOW_TELEPORTS = "enable-shulker-follow-teleports";
     private static final String UNSAFE_BLOCKS = "unsafe-blocks";
 
     private static final String MSG_PREFIX = "msg-prefix";
@@ -36,6 +37,7 @@ public class Configuration {
   private final int checkDelay;
   private Material controlItemMaterial = Material.BAMBOO;
   private final List<String> controlItemLore;
+  private final boolean enableShulkerFollowTeleports;
   private final ArrayList<Material> unsafeBlocks;
 
   private final String msgPrefix;
@@ -73,7 +75,7 @@ public class Configuration {
       }
       controlItemLore.add(ChatColor.GREEN + loreLine);
     }
-
+    this.enableShulkerFollowTeleports = config.getBoolean(Key.ENABLE_SHULKER_FOLLOW_TELEPORTS);
     this.unsafeBlocks = new ArrayList<>();
     List<String> unsafeBlockNames = plugin.getConfig().getStringList(Key.UNSAFE_BLOCKS);
     for (String unsafeBlockName : unsafeBlockNames) {
@@ -112,6 +114,10 @@ public class Configuration {
 
   public List<String> getControlItemLore() {
     return controlItemLore;
+  }
+
+  public boolean isEnableShulkerFollowTeleports() {
+    return enableShulkerFollowTeleports;
   }
 
   public ArrayList<Material> getUnsafeBlocks() {

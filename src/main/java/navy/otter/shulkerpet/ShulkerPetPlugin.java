@@ -30,8 +30,10 @@ public class ShulkerPetPlugin extends JavaPlugin {
     getServer().getPluginManager().registerEvents(new ShulkerTargetingListener(), this);
     getServer().getPluginManager().registerEvents(new ShulkerDeathListener(), this);
 
-    Bukkit.getScheduler().runTaskTimerAsynchronously(this, new ShulkerTeleportThread(), 0L,
-        (config.getCheckDelay() * 20));
+    if(config.isEnableShulkerFollowTeleports()) {
+      Bukkit.getScheduler().runTaskTimerAsynchronously(this, new ShulkerTeleportThread(), 0L,
+          (config.getCheckDelay() * 20));
+    }
   }
 
   @Override

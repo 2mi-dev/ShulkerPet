@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ShulkerPet" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a227bb6d-677d-4059-aaf2-c80c9b7d313e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ShulkerPet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/mojang_1.15.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/patched_1.15.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eula.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/latest.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/listener/ShulkerDmgListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/commands/ShulkerPetCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/commands/ShulkerPetCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/commands/ShulkerPetCommandTabCompleter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/commands/ShulkerPetCommandTabCompleter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/listener/BlockRightClickListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/listener/BlockRightClickListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/ShulkerPetPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/ShulkerPetPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/config/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/config/Configuration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/worker/ShulkerPetManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/worker/ShulkerPetManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,27 +44,47 @@
     </option>
   </component>
   <component name="ProjectId" id="1ZBqX0pqvxQukESauiZKbOkxXR9" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../mcserv1152/plugins" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="navy.otter.shulkerpet.Executor" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Minecraft Server" type="JarApplication">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/../../../../mcserv1152/survival-1.15.2-137.jar" />
+      <option name="VM_PARAMETERS" value="-Dfile.encoding=UTF-8 -Xmx5G -Xms5G" />
+      <option name="PROGRAM_PARAMETERS" value="nogui" />
+      <option name="WORKING_DIRECTORY" value="D:\Projekte\mcserv1152\" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <method v="2">
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="ShulkerPet" />
+        </option>
+      </method>
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -71,7 +103,7 @@
       <workItem from="1584483475711" duration="16174000" />
       <workItem from="1584501882737" duration="2461000" />
       <workItem from="1584532275264" duration="27210000" />
-      <workItem from="1584629255628" duration="6953000" />
+      <workItem from="1584629255628" duration="11289000" />
     </task>
     <task id="LOCAL-00001" summary="added spawning logic">
       <created>1584492300838</created>
@@ -150,13 +182,21 @@
       <option name="project" value="LOCAL" />
       <updated>1584635022481</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added delete method">
+      <created>1584636299638</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1584636299638</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="added spawning logic" />
     <MESSAGE value="alpha 0.0.0.1" />
     <MESSAGE value="alpha 0.0.0.2" />
@@ -166,9 +206,14 @@
     <MESSAGE value="added shulker inventory" />
     <MESSAGE value="fixed ShulkerDeathListener nullpointer" />
     <MESSAGE value="fixed pet not working after relogg" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed pet not working after relogg" />
+    <MESSAGE value="added delete method" />
+    <option name="LAST_COMMIT_MESSAGE" value="added delete method" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="740" y="325" key="#BuildArtifactsBeforeRunChooser" timestamp="1584639017364">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="325" key="#BuildArtifactsBeforeRunChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584639017364" />
     <state x="552" y="178" key="#Notifications" timestamp="1584503205365">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -177,14 +222,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="611" y="189" key="#Project_Structure/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584416909887" />
-    <state x="780" y="223" width="687" height="568" key="#com.intellij.ide.util.MemberChooser" timestamp="1584629609664">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584639018675">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="780" y="223" width="687" height="568" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584629609664" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584639018675" />
+    <state x="780" y="223" width="687" height="568" key="#com.intellij.ide.util.MemberChooser" timestamp="1584636748827">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="780" y="223" width="687" height="568" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584636748827" />
     <state x="786" y="441" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1584404952411">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="786" y="441" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584404952411" />
+    <state x="689" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1584638307390">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584638307390" />
     <state x="564" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1584418449029">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -193,35 +246,59 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="749" y="278" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584479000285" />
-    <state x="575" y="114" key="CommitChangelistDialog2" timestamp="1584635021508">
+    <state x="575" y="114" key="CommitChangelistDialog2" timestamp="1584636298378">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1345" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584498516833" />
-    <state x="575" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584635021508" />
-    <state width="1877" height="247" key="GridCell.Tab.0.bottom" timestamp="1584636266837">
+    <state x="575" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584636298378" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1584638997717">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584638997717" />
+    <state width="1879" height="348" key="GridCell.Tab.0.bottom" timestamp="1584639046390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584498435692" />
-    <state width="1877" height="247" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584636266837" />
-    <state width="1877" height="247" key="GridCell.Tab.0.center" timestamp="1584636266837">
+    <state width="1879" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584639046390" />
+    <state width="1879" height="348" key="GridCell.Tab.0.center" timestamp="1584639046390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584498435692" />
-    <state width="1877" height="247" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584636266837" />
-    <state width="1877" height="247" key="GridCell.Tab.0.left" timestamp="1584636266837">
+    <state width="1879" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584639046390" />
+    <state width="1879" height="348" key="GridCell.Tab.0.left" timestamp="1584639046390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584498435692" />
-    <state width="1877" height="247" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584636266837" />
-    <state width="1877" height="247" key="GridCell.Tab.0.right" timestamp="1584636266837">
+    <state width="1879" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584639046390" />
+    <state width="1879" height="348" key="GridCell.Tab.0.right" timestamp="1584639046390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584498435692" />
-    <state width="1877" height="247" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584636266837" />
+    <state width="1879" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584639046390" />
+    <state width="1879" height="348" key="GridCell.Tab.1.bottom" timestamp="1584639566681">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1879" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584639566681" />
+    <state width="1879" height="348" key="GridCell.Tab.1.center" timestamp="1584639566681">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1879" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584639566681" />
+    <state width="1879" height="348" key="GridCell.Tab.1.left" timestamp="1584639566681">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1879" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584639566681" />
+    <state width="1879" height="348" key="GridCell.Tab.1.right" timestamp="1584639566681">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1879" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584639566681" />
     <state x="377" y="190" key="Maven.ArtifactSearchDialog" timestamp="1584404412372">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="377" y="190" key="Maven.ArtifactSearchDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584404412372" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1584639010068">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584639010068" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1584592625082">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ShulkerPet">
+    <output-path>$PROJECT_DIR$/../../../../mcserv1152/plugins</output-path>
+    <root id="archive" name="ShulkerPet.jar">
+      <element id="module-output" name="ShulkerPet" />
+    </root>
+  </artifact>
+</component>

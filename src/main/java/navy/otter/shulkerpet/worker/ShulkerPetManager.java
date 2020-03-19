@@ -24,10 +24,12 @@ public class ShulkerPetManager {
   static Configuration config = ShulkerPetPlugin.getConfiguration();
 
   public void createShulker(Player player) {
-
+    //todo: spawning auf gültigen blöcken
     World world = player.getWorld();
     Location playerLocation = player.getLocation();
     CardinalDirection playerTarget = getCardinalDirection(player);
+
+    player.sendMessage("Llooool");
 
     switch(playerTarget) {
       case EAST:

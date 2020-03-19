@@ -9,6 +9,7 @@ control-item-lore:
   - "Klicke auf einen Block, um"
   - "dein ShulkerPet an diese"
   - "Position zu teleportieren."
+enable-shulker-follow-teleports: true
 unsafe-blocks:
   - "BEDROCK"
   - "FIRE"
