@@ -4,9 +4,11 @@ import java.util.HashMap;
 import java.util.UUID;
 import navy.otter.shulkerpet.config.Configuration;
 import navy.otter.shulkerpet.ShulkerPetPlugin;
+import navy.otter.shulkerpet.entities.ControlItem;
 import navy.otter.shulkerpet.entities.ShulkerPet;
 import navy.otter.shulkerpet.util.LocationCheck;
 import navy.otter.shulkerpet.worker.ShulkerPetManager;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -23,8 +25,7 @@ public class BlockRightClickListener implements Listener {
   @EventHandler
   public void onPlayerInteractEvent(PlayerInteractEvent e) {
     Block clickedBlock = e.getClickedBlock();
-    if (e.getPlayer().getInventory().getItemInMainHand().getType() != config
-        .getControlItemMaterial()
+    if (ControlItem.createControlItem().isSimilar(e.getPlayer().getInventory().getItemInMainHand())
         || clickedBlock == null) {
       return;
     }
@@ -34,9 +35,9 @@ public class BlockRightClickListener implements Listener {
     if (LocationCheck.checkTeleportBlocks(e.getPlayer(), target)) {
       for (UUID shulkerUuid : shulkerMap.keySet()) {
         ShulkerPet sp = shulkerMap.get(shulkerUuid);
-        Shulker shulker = sp.getShulker();
+        Shulker shulker = (Shulker) Bukkit.getEntity(sp.getUuid());
 
-        if (p.getUniqueId() == sp.getOwnerUuid() && !shulker.isDead()) {
+        if (shulker != null && p.getUniqueId().equals(sp.getOwnerUuid()) && !shulker.isDead()) {
           shulker.teleport(target);
           break;
         }

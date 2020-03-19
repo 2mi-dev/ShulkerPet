@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a227bb6d-677d-4059-aaf2-c80c9b7d313e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/commands/ShulkerPetCommandTabCompleter.java" afterDir="false" />
+    <list default="true" id="a227bb6d-677d-4059-aaf2-c80c9b7d313e" name="Default Changelist" comment="fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/commands/ShulkerPetCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/commands/ShulkerPetCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/listener/ShulkerDeathListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/listener/ShulkerDeathListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/util/LocationCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/util/LocationCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/ShulkerPetPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/ShulkerPetPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/entities/ControlItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/entities/ControlItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/listener/BlockRightClickListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/listener/BlockRightClickListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/listener/ShulkerRightClickListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/listener/ShulkerRightClickListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/worker/ShulkerTeleportThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/worker/ShulkerTeleportThread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +72,7 @@
       <workItem from="1584483475711" duration="16174000" />
       <workItem from="1584501882737" duration="2461000" />
       <workItem from="1584532275264" duration="27210000" />
-      <workItem from="1584629255628" duration="4213000" />
+      <workItem from="1584629255628" duration="5732000" />
     </task>
     <task id="LOCAL-00001" summary="added spawning logic">
       <created>1584492300838</created>
@@ -137,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584592623579</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fixed ShulkerDeathListener nullpointer">
+      <created>1584633498440</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1584633498440</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,7 +158,8 @@
     <MESSAGE value="fixed shulker teleport logic" />
     <MESSAGE value="added click to teleport with ci" />
     <MESSAGE value="added shulker inventory" />
-    <option name="LAST_COMMIT_MESSAGE" value="added shulker inventory" />
+    <MESSAGE value="fixed ShulkerDeathListener nullpointer" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed ShulkerDeathListener nullpointer" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Notifications" timestamp="1584503205365">
@@ -178,31 +186,31 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="749" y="278" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584479000285" />
-    <state x="575" y="114" key="CommitChangelistDialog2" timestamp="1584592622355">
+    <state x="575" y="114" key="CommitChangelistDialog2" timestamp="1584633969821">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1345" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584498516833" />
-    <state x="575" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584592622355" />
-    <state width="1877" height="247" key="GridCell.Tab.0.bottom" timestamp="1584592971802">
+    <state x="575" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584633969821" />
+    <state width="1877" height="247" key="GridCell.Tab.0.bottom" timestamp="1584634806260">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584498435692" />
-    <state width="1877" height="247" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584592971802" />
-    <state width="1877" height="247" key="GridCell.Tab.0.center" timestamp="1584592971802">
+    <state width="1877" height="247" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584634806260" />
+    <state width="1877" height="247" key="GridCell.Tab.0.center" timestamp="1584634806260">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584498435692" />
-    <state width="1877" height="247" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584592971802" />
-    <state width="1877" height="247" key="GridCell.Tab.0.left" timestamp="1584592971802">
+    <state width="1877" height="247" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584634806260" />
+    <state width="1877" height="247" key="GridCell.Tab.0.left" timestamp="1584634806260">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584498435692" />
-    <state width="1877" height="247" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584592971802" />
-    <state width="1877" height="247" key="GridCell.Tab.0.right" timestamp="1584592971802">
+    <state width="1877" height="247" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584634806260" />
+    <state width="1877" height="247" key="GridCell.Tab.0.right" timestamp="1584634806260">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584498435692" />
-    <state width="1877" height="247" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584592971802" />
+    <state width="1877" height="247" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584634806260" />
     <state x="377" y="190" key="Maven.ArtifactSearchDialog" timestamp="1584404412372">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

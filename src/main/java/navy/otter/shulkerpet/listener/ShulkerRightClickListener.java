@@ -54,7 +54,7 @@ public class ShulkerRightClickListener implements Listener { //todo:
     ItemStack mainHandStack = player.getInventory().getItemInMainHand();
     Material mainHandStackMaterial = mainHandStack.getType();
 
-    if(ControlItem.createControlItem().isSimilar(mainHandStack) && player.getUniqueId() == sp.getOwnerUuid()) {
+    if(ControlItem.createControlItem().isSimilar(mainHandStack) && player.getUniqueId().equals(sp.getOwnerUuid())) {
       sp.toggleFollowing();
       if(sp.isFollowing()) {
         player.sendMessage(config.getShulkerPetFollowMsg());
@@ -126,7 +126,7 @@ public class ShulkerRightClickListener implements Listener { //todo:
     if (!shulkerMap.containsKey(shulkerUuid)) {
       player.sendMessage(config.getNotAShulkerPetMsg());
       return false;
-    } else if (shulkerMap.get(shulkerUuid).getOwnerUuid() != playerUuid) {
+    } else if (!(shulkerMap.get(shulkerUuid).getOwnerUuid().equals(playerUuid))) {
       player.sendMessage(config.getNotYourShulkerPetMsg());
       return false;
     }

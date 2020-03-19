@@ -1,6 +1,7 @@
 package navy.otter.shulkerpet;
 
 import navy.otter.shulkerpet.commands.ShulkerPetCommand;
+import navy.otter.shulkerpet.commands.ShulkerPetCommandTabCompleter;
 import navy.otter.shulkerpet.config.Configuration;
 import navy.otter.shulkerpet.listener.BlockRightClickListener;
 import navy.otter.shulkerpet.listener.ShulkerDeathListener;
@@ -22,7 +23,8 @@ public class ShulkerPetPlugin extends JavaPlugin {
     config = new Configuration(this);
     spManager = new ShulkerPetManager();
     instance = this;
-    getCommand("shulkerpet").setExecutor(new ShulkerPetCommand());
+    this.getCommand("shulkerpet").setExecutor(new ShulkerPetCommand());
+    this.getCommand("shulkerpet").setTabCompleter(new ShulkerPetCommandTabCompleter());
     getServer().getPluginManager().registerEvents(new ShulkerRightClickListener(), this);
     getServer().getPluginManager().registerEvents(new BlockRightClickListener(), this);
     getServer().getPluginManager().registerEvents(new ShulkerTargetingListener(), this);

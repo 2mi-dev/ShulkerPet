@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.UUID;
 import navy.otter.shulkerpet.ShulkerPetPlugin;
 import navy.otter.shulkerpet.entities.ShulkerPet;
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Shulker;
 
@@ -19,8 +20,8 @@ public class ShulkerTeleportThread implements Runnable {
 
     for (UUID shulkerUuid : shulkerMap.keySet()) {
       ShulkerPet sp = shulkerMap.get(shulkerUuid);
-      Shulker shulker = sp.getShulker();
-      Player player = sp.getOwner();
+      Shulker shulker = (Shulker) Bukkit.getEntity(shulkerUuid);
+      Player player = Bukkit.getPlayer(sp.getOwnerUuid());
 
       if (player == null || shulker == null || !player.isOnline()) {
         continue;
