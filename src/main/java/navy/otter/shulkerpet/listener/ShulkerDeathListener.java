@@ -6,7 +6,6 @@ import navy.otter.shulkerpet.ShulkerPetPlugin;
 import navy.otter.shulkerpet.config.Configuration;
 import navy.otter.shulkerpet.entities.ShulkerPet;
 import navy.otter.shulkerpet.worker.ShulkerPetManager;
-import org.apache.commons.lang.ObjectUtils.Null;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -28,6 +27,9 @@ public class ShulkerDeathListener implements Listener {
     }
     Shulker shulker = (Shulker) entity;
     ShulkerPet sp = shulkerMap.get(shulker.getUniqueId());
+    if(sp == null) {
+      return;
+    }
     Player player = Bukkit.getPlayer(sp.getOwnerUuid());
     if(player != null && player.isOnline()) {
       player.sendMessage(config.getShulkerDeathMsg());

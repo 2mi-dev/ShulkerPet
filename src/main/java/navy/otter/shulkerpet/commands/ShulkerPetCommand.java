@@ -35,6 +35,14 @@ public class ShulkerPetCommand implements CommandExecutor {
           displayHelpMessage(player);
         }
         break;
+      case "ci":
+        if(player.hasPermission("shulkerpet.ci")) {
+          giveControlItem(player);
+        }
+        break;
+      case "help":
+        displayHelpMessage(player);
+        break;
       case "create":
         if(player.hasPermission("shulkerpet.create")) {
           createShulker(player);
@@ -43,11 +51,6 @@ public class ShulkerPetCommand implements CommandExecutor {
       case "delete":
         if(player.hasPermission("shulkerpet.delete")) {
           deleteShulker(player);
-        }
-        break;
-      case "ci":
-        if(player.hasPermission("shulkerpet.ci")) {
-          giveControlItem(player);
         }
         break;
       default:

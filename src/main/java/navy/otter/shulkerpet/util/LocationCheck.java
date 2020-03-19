@@ -42,7 +42,6 @@ public class LocationCheck {
         break;
       }
     }
-
   }
 
   // Check for air on air on solid block
