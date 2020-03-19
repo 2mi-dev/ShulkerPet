@@ -8,6 +8,7 @@ import navy.otter.shulkerpet.config.Configuration;
 import navy.otter.shulkerpet.entities.ShulkerPet;
 import navy.otter.shulkerpet.ShulkerPetPlugin;
 import navy.otter.shulkerpet.util.CardinalDirection;
+import org.bukkit.Bukkit;
 import org.bukkit.DyeColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -61,6 +62,22 @@ public class ShulkerPetManager {
 
     shulkerMap.put(shulkerUuid, sp);
     //todo db
+  }
+
+  public void deleteShulkerPet(Player player) {
+    for(UUID shulkerUuid : ShulkerPetManager.getShulkerMap().keySet()) {
+      ShulkerPet sp = shulkerMap.get(shulkerUuid);
+      Shulker shulker = (Shulker) Bukkit.getEntity(shulkerUuid);
+
+      if (player == null || shulker == null) {
+        continue;
+      }
+
+      if(sp.getOwnerUuid().equals(player.getUniqueId())){
+        sp.getShulker().remove();
+        shulkerMap.remove(shulkerUuid);
+      }
+    }
   }
 
   public void loadPersistentShulkerPets() {}

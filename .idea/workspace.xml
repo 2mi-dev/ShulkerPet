@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a227bb6d-677d-4059-aaf2-c80c9b7d313e" name="Default Changelist" comment="fixed">
+    <list default="true" id="a227bb6d-677d-4059-aaf2-c80c9b7d313e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/ShulkerPetPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/ShulkerPetPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/entities/ControlItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/entities/ControlItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/commands/ShulkerPetCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/commands/ShulkerPetCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/commands/ShulkerPetCommandTabCompleter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/commands/ShulkerPetCommandTabCompleter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/listener/BlockRightClickListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/listener/BlockRightClickListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/listener/ShulkerRightClickListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/listener/ShulkerRightClickListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/worker/ShulkerTeleportThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/worker/ShulkerTeleportThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/worker/ShulkerPetManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/worker/ShulkerPetManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +71,7 @@
       <workItem from="1584483475711" duration="16174000" />
       <workItem from="1584501882737" duration="2461000" />
       <workItem from="1584532275264" duration="27210000" />
-      <workItem from="1584629255628" duration="5732000" />
+      <workItem from="1584629255628" duration="6953000" />
     </task>
     <task id="LOCAL-00001" summary="added spawning logic">
       <created>1584492300838</created>
@@ -144,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584633498440</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fixed pet not working after relogg">
+      <created>1584635022481</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1584635022481</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,7 +165,8 @@
     <MESSAGE value="added click to teleport with ci" />
     <MESSAGE value="added shulker inventory" />
     <MESSAGE value="fixed ShulkerDeathListener nullpointer" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed ShulkerDeathListener nullpointer" />
+    <MESSAGE value="fixed pet not working after relogg" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed pet not working after relogg" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Notifications" timestamp="1584503205365">
@@ -186,31 +193,31 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="749" y="278" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584479000285" />
-    <state x="575" y="114" key="CommitChangelistDialog2" timestamp="1584633969821">
+    <state x="575" y="114" key="CommitChangelistDialog2" timestamp="1584635021508">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1345" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584498516833" />
-    <state x="575" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584633969821" />
-    <state width="1877" height="247" key="GridCell.Tab.0.bottom" timestamp="1584634806260">
+    <state x="575" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584635021508" />
+    <state width="1877" height="247" key="GridCell.Tab.0.bottom" timestamp="1584636266837">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584498435692" />
-    <state width="1877" height="247" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584634806260" />
-    <state width="1877" height="247" key="GridCell.Tab.0.center" timestamp="1584634806260">
+    <state width="1877" height="247" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584636266837" />
+    <state width="1877" height="247" key="GridCell.Tab.0.center" timestamp="1584636266837">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584498435692" />
-    <state width="1877" height="247" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584634806260" />
-    <state width="1877" height="247" key="GridCell.Tab.0.left" timestamp="1584634806260">
+    <state width="1877" height="247" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584636266837" />
+    <state width="1877" height="247" key="GridCell.Tab.0.left" timestamp="1584636266837">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584498435692" />
-    <state width="1877" height="247" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584634806260" />
-    <state width="1877" height="247" key="GridCell.Tab.0.right" timestamp="1584634806260">
+    <state width="1877" height="247" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584636266837" />
+    <state width="1877" height="247" key="GridCell.Tab.0.right" timestamp="1584636266837">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584498435692" />
-    <state width="1877" height="247" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584634806260" />
+    <state width="1877" height="247" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584636266837" />
     <state x="377" y="190" key="Maven.ArtifactSearchDialog" timestamp="1584404412372">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -220,6 +227,10 @@
     </state>
     <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584498520122" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584592625082" />
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584636274894">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584636274894" />
     <state x="825" y="215" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1584406567156">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

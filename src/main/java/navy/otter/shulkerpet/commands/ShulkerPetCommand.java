@@ -1,10 +1,13 @@
 package navy.otter.shulkerpet.commands;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.UUID;
 import navy.otter.shulkerpet.config.Configuration;
 import navy.otter.shulkerpet.entities.ControlItem;
 import navy.otter.shulkerpet.ShulkerPetPlugin;
+import navy.otter.shulkerpet.entities.ShulkerPet;
 import navy.otter.shulkerpet.worker.ShulkerPetManager;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -70,7 +73,8 @@ public class ShulkerPetCommand implements CommandExecutor {
   }
 
   public void deleteShulker(Player player) {
-
+    ShulkerPetManager spManager = ShulkerPetPlugin.getMainInstance().getSpManager();
+    spManager.deleteShulkerPet(player);
   }
 
   public void giveControlItem(Player player) {

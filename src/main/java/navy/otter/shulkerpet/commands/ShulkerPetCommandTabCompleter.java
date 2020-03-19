@@ -30,12 +30,6 @@ public class ShulkerPetCommandTabCompleter implements TabCompleter {
       if (player.hasPermission("shulkerpet.help")) {
         list.add("help");
       }
-      if (player.hasPermission("UtilityUI.debugstick")) {
-        list.add("debug");
-      }
-      if (player.hasPermission("UtilityUI.workbench")) {
-        list.add("wb");
-      }
 
       return list
           .stream()
@@ -44,16 +38,6 @@ public class ShulkerPetCommandTabCompleter implements TabCompleter {
     }
 
     if (args.length <= 2) {
-      if (player.hasPermission("UtilityUI.chests")) {
-        list.add("add");
-        list.add("list");
-        list.add("open");
-      }
-
-      return list
-          .stream()
-          .filter((string) -> string.startsWith(args[1]) && args[0].equals("chests"))
-          .collect(Collectors.toList());
     }
     return new ArrayList<>();
   }

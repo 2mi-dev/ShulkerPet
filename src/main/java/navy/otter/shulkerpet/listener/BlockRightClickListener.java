@@ -25,7 +25,7 @@ public class BlockRightClickListener implements Listener {
   @EventHandler
   public void onPlayerInteractEvent(PlayerInteractEvent e) {
     Block clickedBlock = e.getClickedBlock();
-    if (ControlItem.createControlItem().isSimilar(e.getPlayer().getInventory().getItemInMainHand())
+    if (!ControlItem.createControlItem().isSimilar(e.getPlayer().getInventory().getItemInMainHand())
         || clickedBlock == null) {
       return;
     }
