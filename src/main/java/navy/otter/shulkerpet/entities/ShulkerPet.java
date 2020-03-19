@@ -1,9 +1,12 @@
 package navy.otter.shulkerpet.entities;
 
 import java.util.UUID;
+import org.bukkit.Bukkit;
 import org.bukkit.DyeColor;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Shulker;
+import org.bukkit.event.inventory.InventoryType;
+import org.bukkit.inventory.Inventory;
 
 public class ShulkerPet {
   DyeColor color;
@@ -13,16 +16,18 @@ public class ShulkerPet {
   final Shulker shulker;
   final Player owner;
   boolean isFollowing = true;
+  Inventory inventory;
 
   public ShulkerPet(Shulker shulker, Player owner) {
     this.shulker = shulker;
     this.uuid = shulker.getUniqueId();
     this.owner = owner;
     this.ownerUuid = owner.getUniqueId();
+    this.inventory = Bukkit.createInventory(this.owner, InventoryType.CHEST);
   }
 
   public void openInventory(Player player) {
-    //todo
+    player.openInventory(this.inventory);
   }
 
   public DyeColor getColor() {

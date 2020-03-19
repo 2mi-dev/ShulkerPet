@@ -36,7 +36,7 @@ public class BlockRightClickListener implements Listener {
         ShulkerPet sp = shulkerMap.get(shulkerUuid);
         Shulker shulker = sp.getShulker();
 
-        if (p.getUniqueId() == sp.getOwnerUuid()) {
+        if (p.getUniqueId() == sp.getOwnerUuid() && !shulker.isDead()) {
           shulker.teleport(target);
           break;
         }

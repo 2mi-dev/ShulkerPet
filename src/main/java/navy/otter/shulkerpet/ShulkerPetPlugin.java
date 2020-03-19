@@ -3,6 +3,7 @@ package navy.otter.shulkerpet;
 import navy.otter.shulkerpet.commands.ShulkerPetCommand;
 import navy.otter.shulkerpet.config.Configuration;
 import navy.otter.shulkerpet.listener.BlockRightClickListener;
+import navy.otter.shulkerpet.listener.ShulkerDeathListener;
 import navy.otter.shulkerpet.listener.ShulkerRightClickListener;
 import navy.otter.shulkerpet.listener.ShulkerTargetingListener;
 import navy.otter.shulkerpet.worker.ShulkerTeleportThread;
@@ -25,6 +26,7 @@ public class ShulkerPetPlugin extends JavaPlugin {
     getServer().getPluginManager().registerEvents(new ShulkerRightClickListener(), this);
     getServer().getPluginManager().registerEvents(new BlockRightClickListener(), this);
     getServer().getPluginManager().registerEvents(new ShulkerTargetingListener(), this);
+    getServer().getPluginManager().registerEvents(new ShulkerDeathListener(), this);
 
     Bukkit.getScheduler().runTaskTimerAsynchronously(this, new ShulkerTeleportThread(), 0L,
         (config.getCheckDelay() * 20));

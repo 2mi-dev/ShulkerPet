@@ -27,6 +27,9 @@ public class Configuration {
     private static final String INVENTORY_FULL_MSG = "inventory-full-msg";
     private static final String INVALID_SPAWNING_LOCATION_MSG = "invalid-spawning-location-msg";
     private static final String INVALID_LOCATION_MSG = "invalid-location-msg";
+    private static final String SHULKERPET_FOLLOW_MSG = "shulkerpet-follow-msg";
+    private static final String SHULKERPET_UNFOLLOW_MSG = "shulkerpet-unfollow-msg";
+    private static final String SHULKER_DEATH_MSG = "shulker-death-msg";
   }
 
   private final double maxDistToPlayer;
@@ -42,6 +45,9 @@ public class Configuration {
   private final String inventoryFullMsg;
   private final String invalidSpawningLocationMsg;
   private final String invalidLocationMsg;
+  private final String shulkerPetFollowMsg;
+  private final String shulkerPetUnfollowMsg;
+  private final String shulkerDeathMsg;
 
 
   public Configuration(@NotNull ShulkerPetPlugin plugin) {
@@ -87,6 +93,9 @@ public class Configuration {
     this.inventoryFullMsg = msgPrefix + config.getString(Key.INVENTORY_FULL_MSG);
     this.invalidSpawningLocationMsg = msgPrefix + config.getString(Key.INVALID_SPAWNING_LOCATION_MSG);
     this.invalidLocationMsg = msgPrefix + config.getString(Key.INVALID_LOCATION_MSG);
+    this.shulkerPetFollowMsg = msgPrefix + config.getString(Key.SHULKERPET_FOLLOW_MSG);
+    this.shulkerPetUnfollowMsg = msgPrefix + config.getString(Key.SHULKERPET_UNFOLLOW_MSG);
+    this.shulkerDeathMsg = msgPrefix + config.getString(Key.SHULKER_DEATH_MSG);
   }
 
   public double getMaxDistToPlayer() {
@@ -131,5 +140,17 @@ public class Configuration {
 
   public String getInvalidLocationMsg() {
     return invalidLocationMsg;
+  }
+
+  public String getShulkerPetFollowMsg() {
+    return shulkerPetFollowMsg;
+  }
+
+  public String getShulkerPetUnfollowMsg() {
+    return shulkerPetUnfollowMsg;
+  }
+
+  public String getShulkerDeathMsg() {
+    return shulkerDeathMsg;
   }
 }

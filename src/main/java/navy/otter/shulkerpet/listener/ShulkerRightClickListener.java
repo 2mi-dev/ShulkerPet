@@ -18,7 +18,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.inventory.ItemStack;
 
-public class ShulkerRightClickListener implements Listener {
+public class ShulkerRightClickListener implements Listener { //todo:
 
   Configuration config = ShulkerPetPlugin.getConfiguration();
   HashSet<Player> singleUse = new HashSet<>();
@@ -54,8 +54,13 @@ public class ShulkerRightClickListener implements Listener {
     ItemStack mainHandStack = player.getInventory().getItemInMainHand();
     Material mainHandStackMaterial = mainHandStack.getType();
 
-    if(mainHandStack == ControlItem.createControlItem() && player == sp.getOwner()) {
+    if(ControlItem.createControlItem().isSimilar(mainHandStack) && player.getUniqueId() == sp.getOwnerUuid()) {
       sp.toggleFollowing();
+      if(sp.isFollowing()) {
+        player.sendMessage(config.getShulkerPetFollowMsg());
+      } else {
+        player.sendMessage(config.getShulkerPetUnfollowMsg());
+      }
       e.setCancelled(true);
       return;
     }
