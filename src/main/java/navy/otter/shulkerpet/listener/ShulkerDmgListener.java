@@ -14,7 +14,7 @@ public class ShulkerDmgListener implements Listener {
 
   @EventHandler
   public void onEntityDamageEvent(EntityDamageEvent e) {
-    if(!shulkerMap.containsKey(e.getEntity().getUniqueId())) {
+    if(shulkerMap.containsKey(e.getEntity().getUniqueId())) {
       e.setCancelled(true);
     }
   }
