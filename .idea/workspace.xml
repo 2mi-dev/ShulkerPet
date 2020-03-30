@@ -8,19 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a227bb6d-677d-4059-aaf2-c80c9b7d313e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/commands/ShulkerPetCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/commands/ShulkerPetCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/commands/ShulkerPetCommandTabCompleter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/commands/ShulkerPetCommandTabCompleter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/config/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/config/Configuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/entities/ShulkerPet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/entities/ShulkerPet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/entities/ShulkerPetSpawnEgg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/entities/ShulkerPetSpawnEgg.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/listener/BlockRightClickListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/listener/BlockRightClickListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/listener/ShulkerDeathListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/listener/ShulkerDeathListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/util/CardinalDirection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/util/LocationCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/util/LocationCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/worker/ShulkerPetManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/worker/ShulkerPetManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/worker/ShulkerTeleportThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/navy/otter/shulkerpet/worker/ShulkerTeleportThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +100,7 @@
       <workItem from="1584916863062" duration="26000" />
       <workItem from="1585292013875" duration="38000" />
       <workItem from="1585505606987" duration="6523000" />
-      <workItem from="1585574613217" duration="20292000" />
+      <workItem from="1585574613217" duration="21541000" />
     </task>
     <task id="LOCAL-00001" summary="added spawning logic">
       <created>1584492300838</created>
@@ -212,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584707912857</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added shulker spawn egg">
+      <created>1585599371396</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1585599371396</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +226,8 @@
     <MESSAGE value="fixed pet not working after relogg" />
     <MESSAGE value="added delete method" />
     <MESSAGE value="made shulker completely invulnerable" />
-    <option name="LAST_COMMIT_MESSAGE" value="made shulker completely invulnerable" />
+    <MESSAGE value="added shulker spawn egg" />
+    <option name="LAST_COMMIT_MESSAGE" value="added shulker spawn egg" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="325" key="#BuildArtifactsBeforeRunChooser" timestamp="1584639017364">
@@ -271,11 +267,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="749" y="278" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584479000285" />
-    <state x="575" y="114" key="CommitChangelistDialog2" timestamp="1584707911888">
+    <state x="575" y="114" key="CommitChangelistDialog2" timestamp="1585599369564">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1345" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584498516833" />
-    <state x="575" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584707911888" />
+    <state x="575" y="114" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1585599369564" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1584638997717">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -328,11 +324,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584639010068" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1584707915713">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1585599378213">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1584498520122" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584707915713" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1585599378213" />
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584636274894">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

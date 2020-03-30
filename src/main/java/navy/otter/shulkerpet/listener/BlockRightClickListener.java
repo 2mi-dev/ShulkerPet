@@ -44,7 +44,7 @@ public class BlockRightClickListener implements Listener {
       p.sendMessage(config.getInvalidLocationMsg());
       e.setCancelled(true);
     } else if (ShulkerPetSpawnEgg.createSpawnEgg().isSimilar(handItem) && e.getAction().equals(
-        Action.RIGHT_CLICK_BLOCK)) {
+        Action.RIGHT_CLICK_BLOCK)) { //todo check if player has shulker
       ShulkerPetManager spManager = ShulkerPetPlugin.getMainInstance().getSpManager();
       boolean created = spManager.createShulker(e.getPlayer());
       if(created) {
