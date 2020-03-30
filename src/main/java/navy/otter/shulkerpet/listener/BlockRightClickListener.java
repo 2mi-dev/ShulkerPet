@@ -1,21 +1,24 @@
 package navy.otter.shulkerpet.listener;
 
+import static navy.otter.shulkerpet.worker.ShulkerPetManager.teleportShulker;
+
 import java.util.HashMap;
 import java.util.UUID;
 import navy.otter.shulkerpet.config.Configuration;
 import navy.otter.shulkerpet.ShulkerPetPlugin;
 import navy.otter.shulkerpet.entities.ControlItem;
 import navy.otter.shulkerpet.entities.ShulkerPet;
-import navy.otter.shulkerpet.util.LocationCheck;
+import navy.otter.shulkerpet.entities.ShulkerPetSpawnEgg;
 import navy.otter.shulkerpet.worker.ShulkerPetManager;
 import org.bukkit.Bukkit;
-import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Shulker;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.inventory.ItemStack;
 
 public class BlockRightClickListener implements Listener {
 
@@ -25,26 +28,29 @@ public class BlockRightClickListener implements Listener {
   @EventHandler
   public void onPlayerInteractEvent(PlayerInteractEvent e) {
     Block clickedBlock = e.getClickedBlock();
-    if (!ControlItem.createControlItem().isSimilar(e.getPlayer().getInventory().getItemInMainHand())
-        || clickedBlock == null) {
-      return;
-    }
-
-    Player p = e.getPlayer();
-    Location target = clickedBlock.getLocation().add(0,1,0);
-    if (LocationCheck.checkTeleportBlocks(e.getPlayer(), target)) {
+    ItemStack handItem = e.getPlayer().getInventory().getItemInMainHand();
+    if (ControlItem.createControlItem().isSimilar(handItem)) {
+      Player p = e.getPlayer();
       for (UUID shulkerUuid : shulkerMap.keySet()) {
         ShulkerPet sp = shulkerMap.get(shulkerUuid);
         Shulker shulker = (Shulker) Bukkit.getEntity(sp.getUuid());
 
         if (shulker != null && p.getUniqueId().equals(sp.getOwnerUuid()) && !shulker.isDead()) {
-          shulker.teleport(target);
-          break;
+          teleportShulker(shulker, p, clickedBlock, e.getBlockFace());
+          e.setCancelled(true);
+          return;
         }
       }
-    } else {
       p.sendMessage(config.getInvalidLocationMsg());
+      e.setCancelled(true);
+    } else if (ShulkerPetSpawnEgg.createSpawnEgg().isSimilar(handItem) && e.getAction().equals(
+        Action.RIGHT_CLICK_BLOCK)) {
+      ShulkerPetManager spManager = ShulkerPetPlugin.getMainInstance().getSpManager();
+      boolean created = spManager.createShulker(e.getPlayer());
+      if(created) {
+        handItem.setAmount(handItem.getAmount() - 1);
+      }
+      e.setCancelled(true);
     }
-    e.setCancelled(true);
   }
 }

@@ -1,13 +1,11 @@
 package navy.otter.shulkerpet.commands;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.UUID;
 import navy.otter.shulkerpet.config.Configuration;
 import navy.otter.shulkerpet.entities.ControlItem;
 import navy.otter.shulkerpet.ShulkerPetPlugin;
-import navy.otter.shulkerpet.entities.ShulkerPet;
+import navy.otter.shulkerpet.entities.ShulkerPetSpawnEgg;
 import navy.otter.shulkerpet.worker.ShulkerPetManager;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -38,6 +36,11 @@ public class ShulkerPetCommand implements CommandExecutor {
           displayHelpMessage(player);
         }
         break;
+      case "pack":
+        if(player.hasPermission("shulkerpet.pack")) {
+          packShulker(player);
+        }
+        break;
       case "ci":
         if(player.hasPermission("shulkerpet.ci")) {
           giveControlItem(player);
@@ -48,7 +51,11 @@ public class ShulkerPetCommand implements CommandExecutor {
         break;
       case "create":
         if(player.hasPermission("shulkerpet.create")) {
-          createShulker(player);
+          if(verifier.equalsIgnoreCase("egg")) {
+            giveShulkerEgg(player);
+          } else {
+            createShulker(player);
+          }
         }
         break;
       case "delete":
@@ -75,6 +82,19 @@ public class ShulkerPetCommand implements CommandExecutor {
   public void deleteShulker(Player player) {
     ShulkerPetManager spManager = ShulkerPetPlugin.getMainInstance().getSpManager();
     spManager.deleteShulkerPet(player);
+  }
+
+  public void giveShulkerEgg(Player player) {
+    ItemStack spawnEgg = ShulkerPetSpawnEgg.createSpawnEgg();
+    if(player.getInventory().firstEmpty() != -1) {
+      player.getInventory().addItem(spawnEgg);
+    } else {
+      player.sendMessage(config.getInventoryFullMsg());
+    }
+  }
+
+  public void packShulker(Player player) {
+    ShulkerPetManager.packShulkerPet(player);
   }
 
   public void giveControlItem(Player player) {

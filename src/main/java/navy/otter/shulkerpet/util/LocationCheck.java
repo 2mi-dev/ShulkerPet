@@ -27,7 +27,7 @@ public class LocationCheck {
         playerFeet.add(0, -2, 0),
         playerFeet.add(0, 2, 0),
     };
-
+    
     for (Location loc : locArr) {
       boolean success = false;
       for(int n = 0; n <= 5; n++) {
@@ -60,4 +60,5 @@ public class LocationCheck {
     double distance = player.getLocation().distance(location);
     return distance > 1 && distance < 6;
   }
+
 }

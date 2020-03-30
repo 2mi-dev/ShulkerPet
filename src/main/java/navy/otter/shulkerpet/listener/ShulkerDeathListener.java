@@ -17,6 +17,7 @@ import org.bukkit.event.entity.EntityDeathEvent;
 public class ShulkerDeathListener implements Listener {
 
   HashMap<UUID, ShulkerPet> shulkerMap = ShulkerPetManager.getShulkerMap();
+  HashMap<UUID, UUID> playerShulkerMap = ShulkerPetManager.getPlayerShulkerMap();
   static Configuration config = ShulkerPetPlugin.getConfiguration();
 
   @EventHandler
@@ -31,10 +32,16 @@ public class ShulkerDeathListener implements Listener {
       return;
     }
     Player player = Bukkit.getPlayer(sp.getOwnerUuid());
-    if(player != null && player.isOnline()) {
+
+    if(player == null) {
+      return;
+    }
+
+    if(player.isOnline()) {
       player.sendMessage(config.getShulkerDeathMsg());
     }
     shulkerMap.remove(shulker.getUniqueId());
+    playerShulkerMap.remove(player.getUniqueId());
   }
 
 }

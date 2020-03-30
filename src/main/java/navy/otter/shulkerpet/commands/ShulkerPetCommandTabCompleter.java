@@ -38,6 +38,14 @@ public class ShulkerPetCommandTabCompleter implements TabCompleter {
     }
 
     if (args.length <= 2) {
+      if (player.hasPermission("shulkerpet.create.egg")) {
+        list.add("egg");
+      }
+
+      return list
+          .stream()
+          .filter((string) -> string.startsWith(args[0]))
+          .collect(Collectors.toList());
     }
     return new ArrayList<>();
   }

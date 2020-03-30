@@ -15,6 +15,12 @@ permissions:
   shulkerpet.create:
     description: "Creates a new ShulkerPet"
     default: true
+  shulkerpet.create.egg:
+    description: "Gives a SpawnEgg to create a ShulkerPet"
+    default: true
+  shulkerpet.pack:
+    description: "Packs your ShulkerPet into an Egg"
+    default: true
   shulkerpet.delete:
     description: "Removes a ShulkerPet from a Player"
     default: true
@@ -30,4 +36,4 @@ permissions:
 
 commands:
   shulkerpet:
-    aliases: ["sp", "spet"]
+    aliases: ["spet"]

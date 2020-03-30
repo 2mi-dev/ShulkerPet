@@ -10,10 +10,10 @@ import org.bukkit.inventory.Inventory;
 
 public class ShulkerPet {
   DyeColor color;
-  final UUID uuid;
+  UUID uuid;
   final UUID ownerUuid;
   String customName;
-  final Shulker shulker;
+  Shulker shulker;
   final Player owner;
   boolean isFollowing = true;
   Inventory inventory;
@@ -79,5 +79,21 @@ public class ShulkerPet {
     } else{
       this.setFollowing(true);
     }
+  }
+
+  public void setUuid(UUID uuid) {
+    this.uuid = uuid;
+  }
+
+  public void setShulker(Shulker shulker) {
+    this.shulker = shulker;
+  }
+
+  public void setInventory(Inventory inventory) {
+    this.inventory = inventory;
+  }
+
+  public Inventory getInventory() {
+    return inventory;
   }
 }

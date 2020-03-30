@@ -31,6 +31,8 @@ public class Configuration {
     private static final String SHULKERPET_FOLLOW_MSG = "shulkerpet-follow-msg";
     private static final String SHULKERPET_UNFOLLOW_MSG = "shulkerpet-unfollow-msg";
     private static final String SHULKER_DEATH_MSG = "shulker-death-msg";
+    private static final String PLAYER_ALREADY_HAS_SHULKERPET_MSG = "player-already-has-shulkerpet-msg";
+    private static final String NO_TARGET_BLOCK_MSG = "no-target-block-msg";
   }
 
   private final double maxDistToPlayer;
@@ -50,6 +52,8 @@ public class Configuration {
   private final String shulkerPetFollowMsg;
   private final String shulkerPetUnfollowMsg;
   private final String shulkerDeathMsg;
+  private final String playerAlreadyHasShulkerPetMsg;
+  private final String noTargetBlockMsg;
 
 
   public Configuration(@NotNull ShulkerPetPlugin plugin) {
@@ -98,6 +102,8 @@ public class Configuration {
     this.shulkerPetFollowMsg = msgPrefix + config.getString(Key.SHULKERPET_FOLLOW_MSG);
     this.shulkerPetUnfollowMsg = msgPrefix + config.getString(Key.SHULKERPET_UNFOLLOW_MSG);
     this.shulkerDeathMsg = msgPrefix + config.getString(Key.SHULKER_DEATH_MSG);
+    this.playerAlreadyHasShulkerPetMsg = msgPrefix + config.getString(Key.PLAYER_ALREADY_HAS_SHULKERPET_MSG);
+    this.noTargetBlockMsg = msgPrefix + config.getString(Key.NO_TARGET_BLOCK_MSG);
   }
 
   public double getMaxDistToPlayer() {
@@ -158,5 +164,13 @@ public class Configuration {
 
   public String getShulkerDeathMsg() {
     return shulkerDeathMsg;
+  }
+
+  public String getPlayerAlreadyHasShulkerPetMsg() {
+    return playerAlreadyHasShulkerPetMsg;
+  }
+
+  public String getNoTargetBlockMsg() {
+    return noTargetBlockMsg;
   }
 }
